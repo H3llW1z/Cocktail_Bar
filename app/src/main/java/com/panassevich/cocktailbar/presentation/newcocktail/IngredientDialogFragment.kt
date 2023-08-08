@@ -1,11 +1,13 @@
-package com.panassevich.cocktailbar.presentation
+package com.panassevich.cocktailbar.presentation.newcocktail
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import com.panassevich.cocktailbar.R
 import com.panassevich.cocktailbar.databinding.AddIngredientDialogBinding
 
 class IngredientDialogFragment : DialogFragment() {
@@ -25,14 +27,29 @@ class IngredientDialogFragment : DialogFragment() {
 
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        prepareButtons()
     }
 
     private fun prepareButtons() {
-        binding.buttonCloseDialog.setOnClickListener {
-            dismiss()
+        with(binding) {
+            buttonAdd.setOnClickListener {
+                if (editTextIngredient.text.toString().isBlank()) {
+                    TextFieldIngredient.error = getString(R.string.fill_ingredient_field)
+                }
+            }
+            buttonCloseDialog.setOnClickListener {
+                dismiss()
+            }
         }
     }
 

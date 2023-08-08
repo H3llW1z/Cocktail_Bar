@@ -16,4 +16,8 @@
     <string name="ingredient_s_name">Ingredient\'s name</string>
     <string name="add_ingredient">Add ingredient</string>
     <string name="add">Add</string>
+    <string name="optional_field_helper_text">Optional field</string>
+    <string name="add_cocktail_name">Add cocktail name</string>
+    <string name="add_ingredients">Add ingredients</string>
+    <string name="fill_ingredient_field">Fill ingredient field</string>
 </resources>

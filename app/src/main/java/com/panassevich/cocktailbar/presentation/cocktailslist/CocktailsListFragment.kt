@@ -9,9 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.panassevich.cocktailbar.CocktailApplication
+import com.panassevich.cocktailbar.R
 import com.panassevich.cocktailbar.databinding.FragmentCocktailsListBinding
 import com.panassevich.cocktailbar.di.ViewModelFactory
 import com.panassevich.cocktailbar.presentation.cocktailslist.adapter.CocktailsListAdapter
+import com.panassevich.cocktailbar.presentation.newcocktail.NewCocktailFragment
 import javax.inject.Inject
 
 
@@ -68,8 +70,10 @@ class CocktailsListFragment : Fragment() {
 
     private fun prepareNewCocktailButton() {
         binding.fabNewCocktail.setOnClickListener {
-            Toast.makeText(requireContext(), "На экран создания коктейля", Toast.LENGTH_SHORT)
-                .show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.main_fragment_container, NewCocktailFragment.newInstance(), null)
+                .addToBackStack(NewCocktailFragment.TAG)
+                .commit()
         }
     }
 
