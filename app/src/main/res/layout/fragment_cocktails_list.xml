@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/backgroundColor"
-    tools:context=".presentation.CocktailsListFragment">
+    tools:context=".presentation.cocktailslist.CocktailsListFragment">
 
     <ImageView
         android:id="@+id/imageViewNoCocktails"
@@ -91,6 +91,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNewCocktail"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="21dp"
@@ -98,6 +99,11 @@
         android:contentDescription="@string/create_new_cocktail"
         android:focusable="true"
         android:src="@drawable/ic_plus"
+        android:tint="@color/white"
+        app:backgroundTint="@color/light_blue"
+        app:elevation="1dp"
+        app:fabCustomSize="80dp"
+        app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

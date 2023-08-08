@@ -2,6 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.CocktailBar" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
         <item name="backgroundColor">#FFFFFF</item>
         <item name="colorOnBackground">#313131</item>
         <item name="hintTextColor">#79747E</item>
