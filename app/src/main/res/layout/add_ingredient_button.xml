@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageViewAddButton"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:clickable="true"
+    android:contentDescription="@string/add_additional_ingredient"
+    android:focusable="true"
+    tools:srcCompat="@drawable/ic_add">
+
+</ImageView>

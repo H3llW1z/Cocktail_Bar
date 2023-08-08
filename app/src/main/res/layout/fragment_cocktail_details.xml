@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.CocktailDetailsFragment">
+
+    <ImageView
+        android:id="@+id/imageViewCocktailImage"
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:contentDescription="@string/cocktail_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cocktail_sample_image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/details_bottom_sheet_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/textViewCocktailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/didact_gothic"
+                android:gravity="center"
+                android:textSize="32sp"
+                tools:text="Pink Lemonade" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/didact_gothic"
+                android:gravity="center"
+                android:lineSpacingExtra="-2sp"
+                android:textSize="16sp"
+                tools:text="To make this homemade pink lemonade, simply combine all the ingredients in a pitcher." />
+
+            <TextView
+                android:id="@+id/textViewRecipeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32sp"
+                android:fontFamily="@font/didact_gothic"
+                android:gravity="center"
+                android:text="@string/recipe"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:fontFamily="@font/didact_gothic"
+                android:textSize="16sp"
+                tools:text="Muddle lime with leaves from the mint using a pestle and mortar. Mix with sprite. Add ice if needed." />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

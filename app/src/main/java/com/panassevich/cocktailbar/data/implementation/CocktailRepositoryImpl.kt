@@ -9,8 +9,9 @@ import com.panassevich.cocktailbar.domain.entity.Cocktail
 import com.panassevich.cocktailbar.domain.repository.CocktailRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class CocktailRepositoryImpl(
+class CocktailRepositoryImpl @Inject constructor(
     private val cocktailsDao: CocktailsDao,
     private val ingredientsDao: IngredientsDao
 ) : CocktailRepository {

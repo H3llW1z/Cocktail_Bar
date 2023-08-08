@@ -2,6 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.CocktailBar" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="backgroundColor">#000000</item>
+        <item name="colorOnBackground">#FFFFFF</item>
+        <item name="hintTextColor">#DCDCDC</item>
     </style>
 </resources>

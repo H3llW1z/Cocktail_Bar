@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textViewContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ingredient_list_item_background"
+    android:clickable="true"
+    android:drawablePadding="4dp"
+    android:focusable="true"
+    android:fontFamily="@font/didact_gothic"
+    android:gravity="top"
+    android:paddingStart="10dp"
+    android:paddingTop="3dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dp"
+    android:textSize="12sp"
+    app:drawableEndCompat="@drawable/ic_cross"
+    tools:text="9 cups sprite" />

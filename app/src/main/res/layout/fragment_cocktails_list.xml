@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context=".presentation.CocktailsListFragment">
+
+    <ImageView
+        android:id="@+id/imageViewNoCocktails"
+        android:layout_width="283dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="15dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/image_summer_girl"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNoCocktails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNoCocktails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/didact_gothic"
+        android:gravity="center"
+        android:text="@string/my_cocktails_title"
+        android:textSize="36sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/arrow_down"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fabNewCocktail"
+        app:layout_constraintEnd_toEndOf="@+id/fabNewCocktail"
+        app:layout_constraintStart_toStartOf="@+id/fabNewCocktail" />
+
+    <TextView
+        android:id="@+id/textViewHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/create_cocktail_hint"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewArrow"
+        app:layout_constraintEnd_toEndOf="@+id/fabNewCocktail"
+        app:layout_constraintStart_toStartOf="@+id/fabNewCocktail" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/my_cocktails_title"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCocktails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintVertical_bias="0.0"
+        app:spanCount="2"
+        tools:listitem="@layout/cocktail_list_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewCocktail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="21dp"
+        android:clickable="true"
+        android:contentDescription="@string/create_new_cocktail"
+        android:focusable="true"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

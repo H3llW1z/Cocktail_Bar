@@ -1,8 +1,7 @@
-package com.panassevich.cocktailbar.presentation
+package com.panassevich.cocktailbar
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.panassevich.cocktailbar.R
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
