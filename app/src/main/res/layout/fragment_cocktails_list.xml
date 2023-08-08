@@ -79,6 +79,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
+        android:foregroundGravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,6 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
         app:layout_constraintVertical_bias="0.0"
         app:spanCount="2"
+        tools:itemCount="6"
         tools:listitem="@layout/cocktail_list_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -7,6 +7,7 @@
     android:layout_width="160dp"
     android:layout_height="160dp"
     android:layout_gravity="center"
+    android:layout_margin="4dp"
     app:cardCornerRadius="54dp"
     app:cardElevation="0dp">
 
