@@ -4,5 +4,5 @@ import com.panassevich.cocktailbar.domain.repository.CocktailRepository
 
 class GetCocktailByIdUseCase(private val repository: CocktailRepository) {
 
-    operator fun invoke(id: Int) = repository.getCocktailById(id)
+    suspend operator fun invoke(id: Long) = repository.getCocktailById(id)
 }

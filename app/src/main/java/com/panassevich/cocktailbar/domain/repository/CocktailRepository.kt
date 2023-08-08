@@ -4,9 +4,9 @@ import com.panassevich.cocktailbar.domain.entity.Cocktail
 
 interface CocktailRepository {
 
-    fun getAllCocktails(): List<Cocktail>
+    suspend fun getAllCocktails(): List<Cocktail>
 
-    fun addNewCocktail(cocktail: Cocktail)
+    suspend fun addNewCocktail(cocktail: Cocktail)
 
-    fun getCocktailById(id: Int): Cocktail
+    suspend fun getCocktailById(id: Long): Cocktail
 }

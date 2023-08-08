@@ -4,6 +4,6 @@ import com.panassevich.cocktailbar.domain.repository.CocktailRepository
 
 class GetAllCocktailsUseCase(private val repository: CocktailRepository) {
 
-    operator fun invoke() =
+    suspend operator fun invoke() =
         repository.getAllCocktails()
 }
